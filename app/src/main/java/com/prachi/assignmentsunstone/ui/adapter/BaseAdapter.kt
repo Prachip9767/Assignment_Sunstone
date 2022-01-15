@@ -14,9 +14,8 @@ import com.prachi.assignmentsunstone.local.responses.PhotoModel
 import java.util.*
 
 class BaseAdapter(
-    val resultModelList: List<PhotoModel>,
-    val onCardClicked: OnCardClicked
-) : RecyclerView.Adapter<BaseViewHolder>() {
+    private val resultModelList: List<PhotoModel>,
+    private val onCardClicked: OnCardClicked) : RecyclerView.Adapter<BaseViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
         val itemLayoutBinding: ItemLayoutBinding =
@@ -38,8 +37,8 @@ class BaseAdapter(
 }
 
 class BaseViewHolder(
-    val itemLayoutBinding: ItemLayoutBinding,
-    val onCardClicked: OnCardClicked
+    private val itemLayoutBinding: ItemLayoutBinding,
+    private val onCardClicked: OnCardClicked
 ) :
     RecyclerView.ViewHolder(itemLayoutBinding.root) {
 
@@ -56,7 +55,7 @@ class BaseViewHolder(
         }
     }
 
-    fun getRandomColor(): Int {
+    private fun getRandomColor(): Int {
         val colours: MutableList<Int> = ArrayList()
         colours.add(Color.parseColor("#FED8A9"))
         colours.add(Color.parseColor("#C599D6"))

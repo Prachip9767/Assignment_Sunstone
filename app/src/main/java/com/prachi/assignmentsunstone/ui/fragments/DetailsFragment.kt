@@ -22,13 +22,13 @@ import java.util.*
 @AndroidEntryPoint
 class DetailsFragment : Fragment() {
 
-    val args: DetailsFragmentArgs by navArgs()
+    private val args: DetailsFragmentArgs by navArgs()
     private lateinit var detailsFragmentBindings: FragmentDetailsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         detailsFragmentBindings =
             DataBindingUtil.inflate(inflater, R.layout.fragment_details, container, false)
         return detailsFragmentBindings.root
@@ -47,7 +47,7 @@ class DetailsFragment : Fragment() {
     }
 
     private fun setWallpaper() {
-        val bitmap: Bitmap = detailsFragmentBindings.ivImage.drawable.toBitmap();
+        val bitmap: Bitmap = detailsFragmentBindings.ivImage.drawable.toBitmap()
         val manager: WallpaperManager = WallpaperManager.getInstance(context)
         try {
             manager.setBitmap(bitmap)
@@ -57,7 +57,7 @@ class DetailsFragment : Fragment() {
         }
     }
 
-    fun getRandomColor(): Int {
+    private fun getRandomColor(): Int {
         val colours: MutableList<Int> = ArrayList()
         colours.add(Color.parseColor("#FED8A9"))
         colours.add(Color.parseColor("#C599D6"))

@@ -33,7 +33,7 @@ class HomeFragment : Fragment(), OnCardClicked {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         homeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         return homeBinding.root
     }
@@ -41,7 +41,7 @@ class HomeFragment : Fragment(), OnCardClicked {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.getResponseFromAPI(query = "nature").observe(viewLifecycleOwner, Observer {
+        viewModel.getResponseFromAPI(query = "nature").observe(viewLifecycleOwner, {
             when (it.status) {
                 Status.ERROR -> {
                     Toast.makeText(context, "Check Internet Connection", Toast.LENGTH_SHORT).show()

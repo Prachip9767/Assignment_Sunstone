@@ -6,7 +6,7 @@ import com.prachi.assignmentsunstone.local.interfaces.APIClient
 import com.prachi.assignmentsunstone.local.responses.ResponseModel
 import javax.inject.Inject
 
-class BaseRepositories @Inject constructor(val apiClient: APIClient) {
+class BaseRepositories @Inject constructor(private val apiClient: APIClient) {
 
     private val responseHandler = ResponseHandler()
 

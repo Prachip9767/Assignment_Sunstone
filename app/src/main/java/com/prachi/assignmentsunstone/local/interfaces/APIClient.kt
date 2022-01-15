@@ -8,7 +8,6 @@ import retrofit2.http.Query
 
 interface APIClient {
 
-
     @Headers("Authorization: $API_KEY")
     @GET("search")
     suspend fun getResponseFromAPI(
