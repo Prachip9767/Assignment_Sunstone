@@ -5,13 +5,14 @@ import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.graphics.drawable.toBitmap
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.prachi.assignmentsunstone.R
@@ -38,11 +39,14 @@ class DetailsFragment : Fragment() {
         detailsFragmentBindings.apply {
             Glide.with(ivImage).load(args.srcModel.original).placeholder(
                 ColorDrawable(Color.parseColor("#bcd4e6"))).into(ivImage)
-
+            btnBack.setOnClickListener {
+                Navigation.findNavController(requireView()).navigate(R.id.action_detailsFragment_to_homeFragment)
+            }
             btnSetWallpaper.setOnClickListener {
                 setWallpaper()
             }
         }
+
     }
 
     private fun setWallpaper() {
