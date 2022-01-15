@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <RelativeLayout
+        android:background="#3490dc"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.fragments.DetailsFragment">
@@ -14,19 +15,20 @@
             android:scaleType="fitXY" />
 
         <Button
+            android:elevation="10dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginBottom="22dp"
             android:id="@+id/btnSetWallpaper"
             android:layout_width="wrap_content"
-            android:background="@color/white"
+            android:background="@drawable/button"
             android:layout_alignParentBottom="true"
-            android:padding="10dp"
+            android:padding="20dp"
             android:text="@string/set_wallpaper"
-            android:textColor="#1034a6" />
+            android:textColor="#062a78" />
 
         <Button
-            android:textColor="#1034a6"
+            android:textColor="#062a78"
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,8 +36,9 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="22dp"
-            android:background="@color/white"
-            android:padding="10dp"
+            android:elevation="10dp"
+            android:background="@drawable/button"
+            android:padding="20dp"
             android:text="@string/back" />
 
     </RelativeLayout>

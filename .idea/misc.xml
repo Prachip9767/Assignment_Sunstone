@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/parde/Downloads/assignment_sunstone/assignment_sunstone/app/src/main/res/drawable/button.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/parde/Downloads/assignment_sunstone/assignment_sunstone/app/src/main/res/layout/activity_main.xml" value="0.21296296296296297" />
+        <entry key="..\:/Users/parde/Downloads/assignment_sunstone/assignment_sunstone/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="..\:/Users/parde/Downloads/assignment_sunstone/assignment_sunstone/app/src/main/res/layout/fragment_details.xml" value="0.25" />
         <entry key="..\:/Users/parde/Downloads/assignment_sunstone/assignment_sunstone/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/parde/Downloads/assignment_sunstone/assignment_sunstone/app/src/main/res/layout/item_layout.xml" value="0.25" />
+        <entry key="..\:/Users/parde/Downloads/assignment_sunstone/assignment_sunstone/app/src/main/res/layout/toast_layout.xml" value="0.25" />
       </map>
     </option>
   </component>

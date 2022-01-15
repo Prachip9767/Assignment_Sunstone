@@ -40,7 +40,7 @@ class HomeFragment : Fragment(), OnCardClicked {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+            
         viewModel.getResponseFromAPI(query = "nature").observe(viewLifecycleOwner, {
             when (it.status) {
                 Status.ERROR -> {
