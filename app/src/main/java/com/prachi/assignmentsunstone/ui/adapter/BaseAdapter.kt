@@ -40,7 +40,8 @@ class BaseViewHolder(
     fun setData(photoModel: PhotoModel) {
         itemLayoutBinding.apply {
 
-            Glide.with(ivImage).load(photoModel.srcModel.original).placeholder(ColorDrawable(Color.parseColor("#b0c4de"))).into(ivImage)
+            Glide.with(ivImage).load(photoModel.srcModel.original)
+                .placeholder(ColorDrawable(Color.parseColor("#bcd4e6"))).into(ivImage)
 
             ivCard.setOnClickListener {
                 onCardClicked.onCardClicked(photoModel.srcModel)

@@ -17,7 +17,6 @@ import com.bumptech.glide.Glide
 import com.prachi.assignmentsunstone.R
 import com.prachi.assignmentsunstone.databinding.FragmentDetailsBinding
 import dagger.hilt.android.AndroidEntryPoint
-import java.util.*
 
 @AndroidEntryPoint
 class DetailsFragment : Fragment() {
@@ -38,7 +37,7 @@ class DetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         detailsFragmentBindings.apply {
             Glide.with(ivImage).load(args.srcModel.original).placeholder(
-                ColorDrawable(Color.parseColor("#b0c4de"))).into(ivImage)
+                ColorDrawable(Color.parseColor("#bcd4e6"))).into(ivImage)
 
             btnSetWallpaper.setOnClickListener {
                 setWallpaper()

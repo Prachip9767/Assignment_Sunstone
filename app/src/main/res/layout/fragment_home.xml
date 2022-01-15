@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
+        android:background="#1034a6"
         android:layout_height="match_parent"
         tools:context=".ui.fragments.HomeFragment">
-
+        <RelativeLayout
+            android:background="#1034a6"
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:layout_margin="10dp"
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_marginEnd="15dp"
+                    android:id="@+id/gifImageView"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/welcome"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.appcompat.widget.Toolbar>
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/toolBar"
             android:id="@+id/recyclerViewHomeFrag"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
+            android:layout_height="wrap_content" />
+        </RelativeLayout>
     </FrameLayout>
 </layout>
