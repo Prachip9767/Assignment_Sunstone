@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import com.prachi.assignmentsunstone.R
@@ -40,7 +39,7 @@ class HomeFragment : Fragment(), OnCardClicked {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-            
+
         viewModel.getResponseFromAPI(query = "nature").observe(viewLifecycleOwner, {
             when (it.status) {
                 Status.ERROR -> {
