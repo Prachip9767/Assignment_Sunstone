@@ -1,5 +1,5 @@
 # Assignment_Sunstone✨
-WallCraft is a App where you can set different wallpaper in you mobile without downloading them
+WallCraft is a App where you can set different wallpaper in you mobile.
 
 ![Green and Cream Modern Sales Marketing Presentation](https://user-images.githubusercontent.com/86509987/149639646-8b3f8faf-7026-4db1-bd86-12d7e77f5af1.png)
 
